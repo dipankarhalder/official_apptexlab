@@ -1,42 +1,128 @@
+/*=================
+  Root
+=================*/
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/*=================
+  Reset
+=================*/
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
+html,
+body {
+  height: auto;
+}
+body {
+  position: relative;
+  width: 100%;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--foreground);
+  background: var(--background);
+  font-family:
+    var(--font-sora),
+    system-ui,
+    -apple-system,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-feature-settings:
+    "kern" 1,
+    "kern";
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 a {
   color: inherit;
   text-decoration: none;
 }
+button,
+label {
+  cursor: pointer;
+}
+button {
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background-color: initial;
+  border: 0;
+  border-radius: 0;
+}
+textarea {
+  overflow: hidden;
+  resize: none;
+}
+a:focus,
+button:focus,
+input,
+input:active,
+input:focus,
+label:focus,
+textarea,
+textarea:active,
+textarea:focus {
+  outline: none;
+}
+a.focus-visible:focus,
+button.focus-visible:focus,
+label.focus-visible:focus {
+  outline: 1px solid var(--highlight-color);
+}
+blockquote:before {
+  content: "\201C";
+}
+blockquote:after {
+  content: "\201D";
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  white-space: normal;
+}
+h1 {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/*=================
+  Screen Reader
+=================*/
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
 }
