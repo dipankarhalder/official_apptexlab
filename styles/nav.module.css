@@ -1,0 +1,72 @@
+:root {
+  --maincolor: #7c7c02;
+}
+.app_header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  z-index: 5;
+  transform: translateY(0%);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    padding 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.app_nav_wrap {
+  width: auto;
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+.app_nav_logo {
+  width: 10rem;
+  opacity: 0;
+  display: flex;
+  transform: translate(-50px, 0px);
+}
+.app_nav_logo > svg {
+  width: 100%;
+  height: auto;
+}
+.app_nav_links {
+  display: flex;
+}
+.app_nav_links > ul {
+  display: flex;
+  gap: 2rem;
+}
+.app_nav_links > ul > li > a {
+  font-size: 1.02rem;
+  font-weight: 500;
+  position: relative;
+  font-family: var(--font-sora);
+}
+.app_nav_links > ul > li.active > a {
+  color: var(--maincolor);
+}
+.app_nav_links > ul > li.active > a:after {
+  content: "";
+  bottom: -2px;
+  left: 50%;
+  width: 70%;
+  height: 1px;
+  opacity: 0.2;
+  border-radius: 10px;
+  position: absolute;
+  transform: translateX(-50%);
+  background: var(--maincolor);
+}
+.app_nav_contact {
+  font-size: 1.02rem;
+  font-weight: 500;
+  font-family: var(--font-sora);
+  opacity: 0;
+  transform: translate(50px, 0px);
+}
