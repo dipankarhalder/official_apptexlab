@@ -1,30 +1,41 @@
-"use client";
+import styles from "@/styles/home.module.css";
+import { Intro } from "@/components/home/intro";
+
+const Arrow = () => (
+  <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none">
+    <path
+      d="M6 18L18 6M18 6H10M18 6V14"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export default function Home() {
   return (
-    <>
-      <div className="page">
-        <main className="main">
-          <div className="intro">
-            <h1>To get started, edit the page.js file.</h1>
-          </div>
-        </main>
+    <section className={styles.app_page_home}>
+      <Intro />
+      <div className={styles.app_page_main_links}>
+        <ul>
+          <li>
+            <span>1</span>
+            Application Development
+            <Arrow />
+          </li>
+          <li>
+            <span>2</span>
+            Fire Safety Solutions
+            <Arrow />
+          </li>
+          <li>
+            <span>3</span>
+            Security Systems
+            <Arrow />
+          </li>
+        </ul>
       </div>
-
-      <style jsx>{`
-        .page {
-          min-height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .main {
-          text-align: center;
-        }
-        .intro h1 {
-          color: blue;
-        }
-      `}</style>
-    </>
+    </section>
   );
 }
