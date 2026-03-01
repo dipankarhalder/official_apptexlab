@@ -72,6 +72,9 @@ export const Navigation = () => {
   const logoRef = useRef(null);
   const menuRef = useRef(null);
   const contactRef = useRef(null);
+  const currentY = useRef(0);
+  const targetY = useRef(0);
+  const headerRef = useRef(null);
 
   const isActive = (href) =>
     pathname === href || pathname.startsWith(`${href}/`);
@@ -112,10 +115,50 @@ export const Navigation = () => {
         delay: 1.2,
       });
     }
+
+    if (headerRef.current) {
+      const onScroll = () => {
+        const scroll = window.scrollY;
+        if (scroll > 10) {
+          headerRef.current.classList.add(styles.isScrolled);
+        } else {
+          headerRef.current.classList.remove(styles.isScrolled);
+        }
+        if (scroll > currentY.current && scroll > 50) {
+          targetY.current = -headerRef.current.offsetHeight;
+        } else {
+          targetY.current = 0;
+        }
+        currentY.current = scroll;
+      };
+      window.addEventListener("scroll", onScroll);
+
+      let rafId;
+      const smoothUpdate = () => {
+        const currentTransform =
+          parseFloat(
+            headerRef.current.style.transform.replace("translateY(", ""),
+          ) || 0;
+        const y = gsap.utils.interpolate(
+          currentTransform,
+          targetY.current,
+          0.1,
+        );
+
+        headerRef.current.style.transform = `translateY(${y}px)`;
+        rafId = requestAnimationFrame(smoothUpdate);
+      };
+
+      smoothUpdate();
+      return () => {
+        window.removeEventListener("scroll", onScroll);
+        cancelAnimationFrame(rafId);
+      };
+    }
   }, []);
 
   return (
-    <section className={styles.app_header}>
+    <section className={styles.app_header} ref={headerRef}>
       <div className={styles.app_nav_wrap}>
         <div className={styles.app_nav_logo} ref={logoRef}>
           <Logo />
