@@ -4,54 +4,54 @@ import styles from "@/styles/home.module.css";
 const imgBasePath = "https://res.cloudinary.com/dz8zfbrng/image/upload";
 const avatarBig = [
   {
-    imgpath: `${imgBasePath}/v1772322091/aivatar_cir_26_jvynlq.png`,
+    imgpath: `${imgBasePath}/v1772322091/aivatar_cir_26_jvynlq.avif`,
     altag: "Arindam",
   },
   {
-    imgpath: `${imgBasePath}/v1772322090/aivatar_cir_27_xd83gp.png`,
+    imgpath: `${imgBasePath}/v1772322090/aivatar_cir_27_xd83gp.avif`,
     altag: "Sohini",
   },
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_30_l3nupd.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_30_l3nupd.avif`,
     altag: "Madhurima",
   },
   {
-    imgpath: `${imgBasePath}/v1772322090/aivatar_cir_36_xeql9x.png`,
+    imgpath: `${imgBasePath}/v1772322090/aivatar_cir_36_xeql9x.avif`,
     altag: "Ishita",
   },
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_01_uxjjtj.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_01_uxjjtj.avif`,
     altag: "Anirban",
   },
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_13_msqdn5.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_13_msqdn5.avif`,
     altag: "Ritwick",
   },
 ];
 
 const avatarMedium = [
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_09_ntmdh9.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_09_ntmdh9.avif`,
     altag: "Ishita",
   },
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_30_l3nupd.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_30_l3nupd.avif`,
     altag: "Anirban",
   },
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_35_fgglc3.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_35_fgglc3.avif`,
     altag: "Ritwick",
   },
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_16_muh7pj.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_16_muh7pj.avif`,
     altag: "Arindam",
   },
   {
-    imgpath: `${imgBasePath}/v1772322090/aivatar_cir_27_xd83gp.png`,
+    imgpath: `${imgBasePath}/v1772322090/aivatar_cir_27_xd83gp.avif`,
     altag: "Sohini",
   },
   {
-    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_01_uxjjtj.png`,
+    imgpath: `${imgBasePath}/v1772322089/aivatar_cir_01_uxjjtj.avif`,
     altag: "Madhurima",
   },
 ];
@@ -63,6 +63,12 @@ export const Quote = () => {
         <h2>
           Big achievements are just a series of small and manageable steps.
         </h2>
+        <div className={styles.app_quote_line}>
+          <span>6 years experience</span>
+          <span>45+ projects</span>
+          <span>32+ clients</span>
+          <span>4+ countries</span>
+        </div>
         <p>
           ApptexLab is a premier software development firm located in West
           Bengal, India, delivering sophisticated, future-ready digital
@@ -97,6 +103,7 @@ export const Quote = () => {
           </span>
         ))}
       </div>
+      <div className={styles.app_middle_quote_line}></div>
     </div>
   );
 };
