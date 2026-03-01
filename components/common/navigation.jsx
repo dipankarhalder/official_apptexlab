@@ -64,7 +64,7 @@ const navItems = [
   { title: "Services", link: "/services" },
   { title: "Industries", link: "/industries" },
   { title: "About", link: "/about" },
-  { title: "Contact", link: "/contacts" },
+  { title: "Contact", link: "https://calendly.com/heydipankar/30min" },
 ];
 
 export const Navigation = () => {
@@ -165,14 +165,29 @@ export const Navigation = () => {
         </div>
         <div className={styles.app_nav_links}>
           <ul ref={menuRef}>
-            {navItems.map((item) => (
-              <li
-                key={item.title}
-                className={isActive(item.link) ? styles.active : ""}
-              >
-                <Link href={item.link}>{item.title}</Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isExternal = item.link.startsWith("http");
+              return (
+                <li
+                  key={item.title}
+                  className={
+                    !isExternal && isActive(item.link) ? styles.active : ""
+                  }
+                >
+                  {isExternal ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    <Link href={item.link}>{item.title}</Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
