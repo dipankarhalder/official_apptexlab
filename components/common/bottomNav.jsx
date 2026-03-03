@@ -6,13 +6,13 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "@/styles/nav.module.css";
 
 export const BottomNav = ({ onClick }) => {
-  const text = "Menu • Menu • Menu • Menu • Menu • ";
+  const text = "Menu • Menu • Menus • Menu • Menu • ";
   const textRef = useRef(null);
   const [show, setShow] = useState(false);
   const letters = text.split("");
 
   useEffect(() => {
-    const handleScroll = () => setShow(window.scrollY > 70);
+    const handleScroll = () => setShow(window.scrollY > 200);
     window.addEventListener("scroll", handleScroll);
 
     if (textRef.current) {

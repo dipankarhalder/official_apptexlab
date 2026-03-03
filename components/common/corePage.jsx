@@ -1,23 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BottomNav } from "@/components/common/bottomNav";
-import styles from "@/styles/nav.module.css";
+import { HiddenNav } from "@/components/common/hiddenNav";
 
 export const CorePage = ({ childData }) => {
   const [mainShifted, setMainShifted] = useState(false);
 
-  const handleBottomNavClick = () => {
-    setMainShifted((prev) => !prev);
-  };
+  useEffect(() => {
+    if (mainShifted) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [mainShifted]);
 
   return (
     <>
       <main>{childData}</main>
-      <div className={`${styles.hiddenNav} ${mainShifted ? styles.show : ""}`}>
-        sdknfsd
-      </div>
-      <BottomNav onClick={handleBottomNavClick} />
+      <HiddenNav mainShifted={mainShifted} />
+      <BottomNav onClick={() => setMainShifted((prev) => !prev)} />
     </>
   );
 };

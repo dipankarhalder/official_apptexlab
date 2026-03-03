@@ -3,6 +3,7 @@
   --blue: #0a5dd1;
   --white: #ffffff;
   --black: #000000;
+  --gray: #a1a1a1;
 }
 .app_header {
   top: 0;
@@ -14,18 +15,12 @@
   justify-content: space-between;
   padding: 1.2rem 2rem;
   z-index: 5;
-  /* transform: translateY(0%); */
   transition:
     background-color 0.3s ease,
     box-shadow 0.3s ease,
     padding 0.5s ease-in-out;
   background-color: transparent;
 }
-/* .isScrolled {
-  padding: 1.2rem 2rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-} */
 .app_nav_wrap {
   width: auto;
   display: flex;
@@ -116,7 +111,7 @@
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 13px;
-  color: var(--black);
+  color: var(--gray);
   font-family: var(--font-sora);
   text-transform: uppercase;
 }
@@ -126,8 +121,8 @@
   right: 0;
   position: fixed;
   width: 100%;
-  height: 200px;
-  background: var(--blue);
+  height: 420px;
+  background: var(--black);
   opacity: 0;
   transform: translateY(80px);
   transition:
@@ -140,4 +135,70 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+.inside_bottom_nav_area {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.nav_inner {
+  padding: 4rem 6rem;
+}
+.inside_bottom_nav_area > .nav_inner > ul {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  will-change: transform;
+}
+.inside_bottom_nav_area > .nav_inner > ul > li {
+  flex: 0 0 400px;
+  width: 400px;
+}
+.inside_bottom_nav_area > .nav_inner > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inside_bottom_nav_area > .nav_inner > ul > li > a > h5 {
+  color: var(--white);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-gilroy);
+  position: relative;
+  padding-left: 0px;
+  transition: 0.5s;
+}
+.inside_bottom_nav_area > .nav_inner > ul > li > a > h5:after {
+  content: "";
+  left: 0px;
+  top: 9px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: 0.5s;
+  background-color: var(--blue);
+}
+.inside_bottom_nav_area > .nav_inner > ul > li:hover h5 {
+  padding-left: 20px;
+  transition: 0.5s;
+}
+.inside_bottom_nav_area > .nav_inner > ul > li:hover h5:after {
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  transition: 0.5s;
+}
+.inside_bottom_nav_area > .nav_inner > ul > li > a > picture {
+  display: flex;
+  width: 100%;
+}
+.inside_bottom_nav_area > .nav_inner > ul > li > a > picture > img {
+  display: flex;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 2px solid var(--white);
+  outline: 0.5px solid #0000001a;
 }
