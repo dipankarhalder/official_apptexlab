@@ -143,6 +143,21 @@
   background-color: var(--white);
   z-index: 2;
 }
+.app_intro_hero_banner::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+  background: #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
 .app_hero_banner_columns {
   position: absolute;
   padding: 0px 20px;
