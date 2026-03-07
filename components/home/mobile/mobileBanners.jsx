@@ -9,14 +9,25 @@ const COLUMNS = [
     "/v1772273936/16_clzcmk.avif",
     "/v1772273936/19_qcxm0q.avif",
     "/v1772273935/15_ov2ps6.avif",
+    "/v1772273935/10_vwunqa.avif",
   ],
   [
-    "/v1772273935/14_jxaxjf.avif",
+    "/v1772273935/8_i9kasp.avif",
+    "/v1772273935/7_urdcly.avif",
+    "/v1772273935/5_gxbih1.avif",
+    "/v1772273934/1_oilara.avif",
+    "/v1772273934/6_eulyc3.avif",
+    "/v1772273934/3_t85ycv.avif",
+    "/v1772273934/2_leleui.avif",
+  ],
+  [
+    "/v1772273935/10_vwunqa.avif",
+    "/v1772273933/4_g7s3wt.avif",
     "/v1772273935/11_pwp4kt.avif",
     "/v1772273935/9_xgzrpy.avif",
     "/v1772273935/13_olyhqs.avif",
     "/v1772273935/12_smqj3j.avif",
-    "/v1772273935/10_vwunqa.avif",
+    "/v1772273935/14_jxaxjf.avif",
   ],
 ];
 
