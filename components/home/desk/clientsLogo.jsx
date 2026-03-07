@@ -33,6 +33,7 @@ const logoTop = [
     altag: "Arvind",
   },
 ];
+
 const logoBottom = [
   {
     imgpath: `${imgBasePath}/v1772367182/c6_rrkyv3.avif`,
@@ -117,7 +118,7 @@ export const ClientsLogo = () => {
                   alt={item.altag}
                   width={120}
                   height={120}
-                  sizes="120px"
+                  sizes="cover"
                 />
               </li>
             ))}
@@ -130,44 +131,12 @@ export const ClientsLogo = () => {
                   alt={item.altag}
                   width={120}
                   height={120}
-                  sizes="120px"
+                  sizes="cover"
                 />
               </li>
             ))}
           </ul>
         </div>
-      </div>
-      <div className={styles.app_recognition}>
-        <ul>
-          <li>
-            <Image
-              src={"/img/1.jpg"}
-              alt={""}
-              width={300}
-              height={131}
-              sizes="cover"
-            />
-          </li>
-          <li>
-            <Image
-              src={"/img/2.jpg"}
-              alt={""}
-              width={300}
-              height={131}
-              sizes="cover"
-            />
-          </li>
-          <li>
-            <Image
-              src={"/img/3.jpg"}
-              alt={""}
-              width={300}
-              height={131}
-              sizes="cover"
-            />
-          </li>
-        </ul>
-        <p>Our Archievements</p>
       </div>
     </div>
   );
