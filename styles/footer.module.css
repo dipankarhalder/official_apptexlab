@@ -1,0 +1,103 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+}
+
+.footer_cover {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  background-color: #f9f9f9;
+  border-top: 1px solid #efefef;
+  background-image: url("/line.svg");
+  background-repeat: repeat;
+}
+.appMarqueeScroll {
+  width: 100%;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+.appMarqueCover {
+  display: flex;
+  gap: 0px;
+  width: max-content;
+}
+.appMarqueCover p {
+  white-space: nowrap;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  font-family: var(--font-gilroy);
+  padding-right: 30px;
+}
+.app_recognition {
+  display: flex;
+  width: 100%;
+  padding: 4rem clamp(20px, 8vw, 160px);
+  justify-content: space-between;
+  align-items: center;
+}
+.app_follow_area {
+  display: flex;
+  flex-direction: column;
+}
+.app_follow_area > p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #999;
+  font-family: var(--font-gilroy);
+}
+.app_follow_area > ul {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+.app_follow_area > ul > li {
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+}
+.app_follow_area > ul > li > img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+}
+.app_recog_area {
+  display: flex;
+  flex-direction: column;
+}
+.app_recog_area > p {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #999999;
+  font-family: var(--font-gilroy);
+}
+.app_recog_area > ul {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+.app_recog_area > ul > li {
+  width: 120px;
+  height: auto;
+  overflow: hidden;
+}
+.app_recog_area > ul > li > img {
+  width: 120px;
+  height: auto;
+}
+.mainFooter {
+  display: flex;
+  width: 100%;
+  padding: 0px 4rem;
+}
+.footreCoverArea {
+  display: flex;
+  width: 100%;
+}

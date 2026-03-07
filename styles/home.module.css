@@ -915,31 +915,3 @@
 .app_dev_quotes > span:last-child:after {
   display: none;
 }
-.app_recognition {
-  display: flex;
-  width: 100%;
-  margin-top: 10rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10rem;
-}
-.app_recognition > p {
-  position: relative;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-top: 10px;
-  color: #999999;
-  font-family: var(--font-gilroy);
-}
-.app_recognition > ul {
-  display: flex;
-  width: 70rem;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-.app_recognition > ul > li {
-  width: 160px;
-  height: auto;
-}

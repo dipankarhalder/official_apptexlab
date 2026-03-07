@@ -1,20 +1,12 @@
-import styles from "@/styles/home.module.css";
-import { Intro } from "@/components/home/intro";
-import { MainLink } from "@/components/home/mainLink";
-import { SpotLight } from "@/components/home/spotLight";
-import { Quote } from "@/components/home/quote";
-import { Services } from "@/components/home/services";
-import { ClientsLogo } from "@/components/home/clientsLogo";
+"use client";
+
+import useMediaQuery from "@/components/hooks/useMediaQuery";
+import { HomeDesk } from "@/components/home/homeDesk";
+import { HomeMobile } from "@/components/home/homeMobile";
 
 export default function Home() {
-  return (
-    <section className={styles.app_page_home}>
-      <Intro />
-      <MainLink />
-      <SpotLight />
-      <Quote />
-      <Services />
-      <ClientsLogo />
-    </section>
-  );
+  const isMobile = useMediaQuery("(max-width: 769px)");
+  if (isMobile === null) return null;
+
+  return isMobile ? <HomeMobile /> : <HomeDesk />;
 }
