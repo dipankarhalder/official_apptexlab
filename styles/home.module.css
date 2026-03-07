@@ -318,6 +318,31 @@
   border-color: var(--black);
   stroke: var(--black);
 }
+@media (max-width: 769px) {
+  .app_page_main_links {
+    height: auto;
+    padding: 2.5rem 1rem 0rem;
+  }
+  .app_page_main_links > ul {
+    align-items: flex-start;
+    margin-top: 3rem;
+  }
+  .app_page_main_links > ul > li > a {
+    font-size: 1.2rem;
+  }
+  .app_page_main_links > ul > li > a > span {
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 30px;
+    margin-right: 2px;
+  }
+  .app_page_main_links > ul > li > a > svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 .app_middle_line {
   position: absolute;
   top: 60%;

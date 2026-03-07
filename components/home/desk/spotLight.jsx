@@ -1,7 +1,6 @@
 "use client";
 
 import gsap from "gsap";
-import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "@/styles/home.module.css";
