@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import { Sora } from "next/font/google";
 import "./globals.css";
-import { Navigation } from "@/components/common/navigation";
 import { CorePage } from "@/components/common/corePage";
 
 const gilroy = localFont({
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${sora.variable} ${gilroy.variable}`}>
-        <Navigation />
         <CorePage childData={children} />
       </body>
     </html>

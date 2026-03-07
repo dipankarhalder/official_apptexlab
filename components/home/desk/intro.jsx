@@ -213,7 +213,7 @@ export const Intro = () => {
     <div className={styles.app_page_intro} ref={heroRef}>
       <div className={styles.app_intro_content}>
         <div className={styles.app_intor_inside}>
-          <h1 ref={titleRef}>Turning ideas into digital success stories</h1>
+          <h1 ref={titleRef}>Turning ideas into digital success stories.</h1>
           <div className={styles.app_punct_line} ref={punctRef}>
             <span>6 years experience</span>
             <span>Countless products</span>
